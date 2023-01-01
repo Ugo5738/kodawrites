@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% if article %}
+
+        <div class="article-container">
+            <div class="article-title">{{ title }}</div>
+            <div class="article-date">{{ date }}</div>
+            <div class="article-body">{{ article }}</div>
+        </div>
+        
+    {% else %}
+
+        <form method="POST">
+            {{ tech_form.hidden_tag() }}
+        
+            {{ tech_form.title.label(class="form-label") }}
+            {{ tech_form.title(class="form-input") }}
+
+            {{ tech_form.keywords.label(class="form-label") }}
+            {{ tech_form.keywords(class="form-input") }}
+        
+            {{ tech_form.submit(class="btn") }}
+        </form>
+    
+    {% endif%}
+    
+{% endblock %}
