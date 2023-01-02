@@ -1,11 +1,4 @@
 /**
-* Template Name: MyResume - v4.10.0
-* Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
-/**
 Custom CSS
 */
 
@@ -15,7 +8,7 @@ Custom CSS
   top: 0; /* position the container at the top of the page */
   margin: 0 auto; /* center the container horizontally */
   margin-top: 10%;
-  margin-bottom: 17%;
+  margin-bottom: 40px;
   text-align: center; /* Center the text within the form */
   padding: 20px; /* adds padding around the content inside the container */
   border: 1px solid #ccc; /* adds a border around the container */
@@ -44,28 +37,68 @@ Custom CSS
   font-size: 16px;
   line-height: 1.5;
 }
-  
-form {
-    position: relative;
-    width: 50%;
-    top: 0; /* position the container at the top of the page */
-    margin: 0 auto; /* center the container horizontally */
-    margin-top: 10%;
-    margin-bottom: 17%;
-    text-align: center; /* Center the text within the form */
-    padding: 20px; /* adds padding around the content inside the container */
-    border: 1px solid #ccc; /* adds a border around the container */
-    border-radius: 10px; /* rounds the corners of the border */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* adds a subtle shadow to the container */
-    background-color: #fff; /* sets the background color of the container */
-    font-family: 'Open Sans', sans-serif; /* sets the font for the content inside the container */
-    font-size: 16px; /* sets the font size for the content inside the container */
-    line-height: 1.5; /* sets the line height for the content inside the container */
-    color: #333; /* sets the text color for the content inside the container */
+
+.article-wrapper {
+  position: relative;
+  text-align: center;
+}
+
+.action-call {
+    display: inline-block; /* change the headings from a flex container to a block container */ 
+    line-height: 100px;
+    vertical-align: middle;
+    margin-top: 40px;
+}
+
+.action-call h4 {
+  color: rgb(241, 207, 10); /* change the color of the headings text to gold */
+}
+
+.stripe-btn {
+  display: inline-block; /* change the element from an anchor to an inline-block element */
+  height: 50px;
+  line-height: 30px;
+  padding: 10px 15px; /* add padding to the element */
+  border: none; /* remove the border */
+  border-radius: 30px; /* round the corners of the element */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* add a subtle shadow to the button */
+  background-color: #0563bb; /* set the background color of the button */
+  color: white; /* set the text color of the button */
+  text-decoration: none; /* remove the underline from the link */
+  font-size: 16px; /* set the font size of the button text */
+  cursor: pointer; /* change the cursor to a pointer when hovering over the button */
+}
+
+.stripe-btn:hover {
+  background-color: #004c8c; /* change the background color on hover */
+  color: white;
+}
+
+.stripe-btn:active {
+  transform: translateY(2px); /* add a slight vertical offset on active state */
+}
+
+.write-form {
+  position: relative;
+  width: 50%;
+  top: 0; /* position the container at the top of the page */
+  margin: 0 auto; /* center the container horizontally */
+  margin-top: 10%;
+  margin-bottom: 17%;
+  text-align: center; /* Center the text within the form */
+  padding: 20px; /* adds padding around the content inside the container */
+  border: 1px solid #ccc; /* adds a border around the container */
+  border-radius: 10px; /* rounds the corners of the border */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* adds a subtle shadow to the container */
+  background-color: #fff; /* sets the background color of the container */
+  font-family: 'Open Sans', sans-serif; /* sets the font for the content inside the container */
+  font-size: 16px; /* sets the font size for the content inside the container */
+  line-height: 1.5; /* sets the line height for the content inside the container */
+  color: #333; /* sets the text color for the content inside the container */
 }
 
 /* Style the form inputs */
-form input, form textarea {
+.write-form input, .write-form textarea {
   width: 100%;
   padding: 20px 20px;
   margin: 8px 0;
@@ -76,8 +109,8 @@ form input, form textarea {
   margin-bottom: 3%;
 }
 
-form input[type="text"]:hover,
-form input[type="text"]:focus {
+.write-form input[type="text"]:hover,
+.write-form input[type="text"]:focus {
     box-shadow: 0 0 2px rgba(97, 128, 211, 0.815);
     outline: none;
   }
@@ -105,13 +138,27 @@ form input[type="text"]:focus {
 }
 
 /* Style the form labels */
-form label {
+.write-form label {
   font-weight: bold; /* Make the labels bold */
   display: block; /* Display the label as a block element */
   margin-top: 1%;
   margin-bottom: 0%; /* Add some space between the label and the input */
 }
 
+@media (max-width: 600px) {
+  .article-container, .action-call {
+    width: 100%;
+  }
+
+  .article-container {
+    margin-bottom: 20px;
+  }
+  
+  .write-form input[type="text"], .write-form textarea, .write-form select {
+    height: 50px;
+    font-size: 16px;
+  }
+}
 
 /*--------------------------------------------------------------
 # General

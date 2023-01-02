@@ -2,10 +2,10 @@ from flask import render_template, request, url_for, redirect
 
 from app.tech import bp
 from app.extensions import db
-from app.models.tech import Techarticle
+from app.models.tech.tech import Techarticle
 from app.forms.tech import ArticleForm
 
-from app.utils.generate import write_up
+from app.writer.generate import write_up
 from datetime import date
 
 

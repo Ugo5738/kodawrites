@@ -4,15 +4,24 @@
 
     {% if article %}
 
-        <div class="article-container">
-            <div class="article-title">{{ title }}</div>
-            <div class="article-date">{{ date }}</div>
-            <div class="article-body">{{ article }}</div>
+        <div class="article-wrapper">
+            <div class="article-container">
+                <div class="article-title">{{ title }}</div>
+                <div class="article-date">{{ date }}</div>
+                <div class="article-body">{{ article }}</div>
+            </div>
+
+            <div class="action-call">
+                <h4>Impressed? Subscribe to get personalize articles from me for as low as $1 per article:</h4>
+                <a href="" id="stripe-button" class="stripe-btn" method="POST">Subscribe</a>
+            </div>
         </div>
-        
+
     {% else %}
 
-        <form method="POST">
+        <form class="write-form" method="POST">
+            <h4>Put my writing skills to the test</h4>
+            
             {{ tech_form.hidden_tag() }}
         
             {{ tech_form.title.label(class="form-label") }}
